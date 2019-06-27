@@ -1,0 +1,38 @@
+<mvc:View
+	controllerName="nabi.seed.app.controller.Home"
+	xmlns="sap.m"
+	xmlns:core="sap.ui.core"
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns:semantic="sap.m.semantic">
+
+	<semantic:FullscreenPage
+		id="page"
+		navButtonPress="onNavBack"
+		showNavButton="true"
+		title="{i18n>homeViewTitle}">
+		<semantic:content>
+
+			<Button
+				id="homeButton"
+				class="sapUiSmallMargin"
+				text="{i18n>helloWorldBtnText}"
+				press=".onPress"/>
+
+			<Button
+				id="homeMomentjsButton"
+				class="sapUiSmallMargin"
+				text="{i18n>momentjsBtnText}"
+				press=".onPressMomentjs"/>
+
+			<core:ComponentContainer
+				id="myComponent"
+				class="sapUiSmallMargin"
+				usage="simpleCustomerSelectionWithButton"
+				async="true"
+				componentCreated=".onComponentCreated"/>
+
+		</semantic:content>
+
+	</semantic:FullscreenPage>
+
+</mvc:View>
